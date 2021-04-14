@@ -35,6 +35,9 @@ const Contact = () => {
           </a>
         </li>
       </div>
+      <footer className="copyR">
+        <h5>© 2021 Juan Martinez</h5>
+      </footer>
     </div>
   );
 };
