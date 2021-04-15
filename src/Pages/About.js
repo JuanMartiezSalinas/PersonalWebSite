@@ -7,17 +7,14 @@ const About = () => {
   return (
     <section className="about" id="about">
       <div className="presentation-box">
-        <h1>I'm Juan Martinez</h1>
+        <h1>Juan Martinez</h1>
         <p>
           I'm a self-taught web developer and intern aeronautical engineer. Now
-          im focused on develop as far as
-          <br />
-          possible my skills with React. Im interested also learning backend
-          {/* `<br /> */}
-          develop an new technologies that help <br />
+          im focused on develop as far as possible my skills with React. Im
+          interested also learning backend develop an new technologies that help
           me growth as a a web developer. Now im focused to land a job as
-          frontend developer thats why i'm mostly <br />
-          focused in build React projects
+          frontend developer thats why i'm mostly focused in build React
+          projects
         </p>
       </div>
       <div className="skills">
@@ -36,7 +33,7 @@ const About = () => {
       <div className="tools">
         <h2>Tools</h2>
         <ul>
-          <li>Javascript (React)</li>
+          <li> Javascript (React)</li>
           <li>HTML,CSS</li>
           <li>C++ (just a little bit)</li>
           <li>Express MongoDB (still in process)</li>
