@@ -1,29 +1,24 @@
 /** @format */
+
 import React from "react";
-import { Route, Switch } from "react-router-dom";
-import Info from "./Components/Info";
-import Video from "./Components/Video";
-import Switches from "./Components/Switches";
-import Home from "./pages/Home";
-import Switches2 from "./pages/Switches";
-function App() {
+import { Switch, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import ContactMe from "./Pages/ContactMe";
+import AllProjects from "./Pages/AllProjects";
+import AboutMe from "./Pages/AboutMe";
+const App = () => {
   return (
-    <Switch>
-      <Route path="/" exact>
-        <Home />
-      </Route>
-      <Route path="/#switches">
-        <Info />
-      </Route>
-      <Route path="/#Keyboards">
-        <Switches />
-      </Route>
-      <Route path="/#contact">
-        <Video />
-      </Route>
-      <Route path="/switches" children={<Switches2 />} />
-    </Switch>
+    <div>
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/ContactMe" children={<ContactMe />} />
+        <Route path="/allProjects" children={<AllProjects />} />
+        <Route path="/about" children={<AboutMe />} />
+      </Switch>
+    </div>
   );
-}
+};
 
 export default App;
