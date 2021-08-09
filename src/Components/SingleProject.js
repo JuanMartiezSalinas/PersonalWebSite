@@ -4,18 +4,20 @@ import React from "react";
 const SingleProject = ({ project, position }) => {
   const { image, name } = project;
   return (
-    <article
-      // style={{ display: "block" }}
-      className={position}
-      style={{
-        backgroundImage: `url(${image})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "contain",
-        backgroundPosition: "center",
-      }}>
+    <article className={position}>
       <div className="crop">
-        <span>{name}</span>
+        <span>
+          <h2>{name}</h2>
+        </span>
       </div>
+      <div
+        className="sliderImg"
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}></div>
     </article>
   );
 };

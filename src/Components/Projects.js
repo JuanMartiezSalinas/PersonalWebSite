@@ -61,9 +61,6 @@ const Projects = () => {
         <button className="prev" onClick={() => setIndex(index - 1)}>
           <FaChevronLeft />
         </button>
-        <button className="next" onClick={() => setIndex(index + 1)}>
-          <FaChevronRight />
-        </button>
         {projects.map((project, projectIndex) => {
           let position = "nextSlide";
           if (projectIndex === index) {
@@ -81,6 +78,9 @@ const Projects = () => {
           };
           return <SingleProject key={projectIndex} {...props} />;
         })}
+        <button className="next" onClick={() => setIndex(index + 1)}>
+          <FaChevronRight />
+        </button>
       </div>
 
       <a
