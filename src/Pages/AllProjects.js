@@ -1,6 +1,7 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
+import { useGlobalContext } from "../context";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import KC from "../Pages/React-projectsportraits/KC.png";
@@ -8,6 +9,7 @@ import PDB from "../Pages/React-projectsportraits/PDB.png";
 import Wheaterapp from "../Pages/React-projectsportraits/Wheaterapp.png";
 import TDL from "../Pages/React-projectsportraits/TDL.png";
 import ProjectCard from "../Components/ProjectCard";
+import AsideMenu from "../Components/AsideMenu";
 const projects = [
   {
     name: "To do list",
@@ -39,8 +41,13 @@ const projects = [
   },
 ];
 const AllProjects = () => {
+  const { closeSideBar } = useGlobalContext();
+  useEffect(() => {
+    closeSideBar();
+  }, []);
   return (
     <>
+      <AsideMenu />
       <Navbar />
       <div className="projectsContainer">
         <h1>My projects</h1>

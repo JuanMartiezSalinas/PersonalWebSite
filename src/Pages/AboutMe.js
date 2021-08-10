@@ -1,11 +1,18 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import AsideMenu from "../Components/AsideMenu";
+import { useGlobalContext } from "../context";
 const AboutMe = () => {
+  const { closeSideBar } = useGlobalContext();
+  useEffect(() => {
+    closeSideBar();
+  }, []);
   return (
     <>
+      <AsideMenu />
       <Navbar />
       <div className="aboutMe">
         <h1>About Me</h1>
