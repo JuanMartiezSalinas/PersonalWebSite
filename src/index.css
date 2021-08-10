@@ -987,6 +987,10 @@ footer h1 {
     text-align: justify;
     font-size: 1.1rem;
   }
+  .section-center p {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
   .projectS {
     grid-template-columns: 1fr;
     margin-top: 5rem;
