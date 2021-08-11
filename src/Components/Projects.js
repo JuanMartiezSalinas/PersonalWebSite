@@ -7,6 +7,7 @@ import Wheaterapp from "../Pages/React-projectsportraits/Wheaterapp.png";
 import TDL from "../Pages/React-projectsportraits/TDL.png";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import SingleProject from "./SingleProject";
+import { Link } from "react-router-dom";
 const projects = [
   {
     name: "To do list",
@@ -55,6 +56,9 @@ const Projects = () => {
   }, [index]);
   return (
     <section className="projects" id="projects">
+      <video muted autoPlay loop className="video-container">
+        <source src={process.env.PUBLIC_URL + "/video.mp4"} type="video/mp4" />
+      </video>
       <h1>my projects</h1>
       <div className="underline"></div>
       <div className="projects-table">
@@ -83,14 +87,9 @@ const Projects = () => {
         </button>
       </div>
 
-      <a
-        type="submit"
-        className="allProjects"
-        href="https://app.netlify.com/teams/juanmartiezsalinas/overview"
-        target="blank"
-        rel="noreferrer">
+      <Link to="/allProjects" className="allProjects">
         See all projects
-      </a>
+      </Link>
     </section>
   );
 };

@@ -23,7 +23,7 @@ const AsideMenu = () => {
             J<span>M</span>
           </h1>
         </div>
-        <button className="show-aside" onClick={closeSideBar}>
+        <button className="close-aside" onClick={closeSideBar}>
           <FaTimes />
         </button>
       </header>

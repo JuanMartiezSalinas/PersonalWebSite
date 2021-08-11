@@ -10,12 +10,13 @@ const ContactMe = () => {
   const { closeSideBar } = useGlobalContext();
   useEffect(() => {
     closeSideBar();
+    window.scrollTo({ top: 0, left: 0 });
   }, []);
   return (
     <>
       <AsideMenu />
       <Navbar />
-      <div className="contact">
+      <div className="contactContainer">
         <h1>Contact</h1>
         <div className="underline"></div>
         <Contact />

@@ -12,6 +12,7 @@ import { useGlobalContext } from "../context";
 const Home = () => {
   const { closeSideBar } = useGlobalContext();
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
     closeSideBar();
   }, []);
   return (

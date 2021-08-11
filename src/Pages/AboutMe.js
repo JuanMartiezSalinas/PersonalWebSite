@@ -9,6 +9,7 @@ const AboutMe = () => {
   const { closeSideBar } = useGlobalContext();
   useEffect(() => {
     closeSideBar();
+    window.scrollTo({ top: 0, left: 0 });
   }, []);
   return (
     <>
