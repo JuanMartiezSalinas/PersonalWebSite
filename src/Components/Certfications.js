@@ -19,6 +19,20 @@ const certifications = [
     img: "https://www.digital55.com/wp-content/uploads/2019/07/%C2%BFQue%CC%81-cualidades-debe-tener-un-desarrollador-especialista-en-React.png",
   },
 ];
+const cutParagraph = (str) => {
+  const splitedStr = str.split(" ");
+  switch (splitedStr[0]) {
+    case "Responsive":
+      return `HTML/CSS`;
+      break;
+    case "Javascript":
+      return "JS";
+      break;
+    case "Front":
+      return "React";
+      break;
+  }
+};
 
 const Certfications = () => {
   return (
@@ -39,7 +53,14 @@ const Certfications = () => {
               className={`element${index}`}
               style={{ backgroundImage: `url(${item.img})` }}>
               <a href={item.url} className="dropElement">
-                <h2>{item.certification}</h2>
+                <div className="background-link"></div>
+                <h2>
+                  {`${
+                    window.innerWidth < 700
+                      ? cutParagraph(item.certification)
+                      : item.certification
+                  }`}
+                </h2>
               </a>
             </div>
           );
