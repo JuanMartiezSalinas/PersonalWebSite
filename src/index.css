@@ -52,7 +52,6 @@ li {
   left: 0;
   width: 100vw;
   z-index: 90;
-  transition: 0.3s;
 }
 .navbar.displaced {
   height: 6rem;
@@ -370,7 +369,7 @@ li {
   align-items: center;
 }
 .dropElement h2 {
-  padding: 4rem 3rem;
+  padding: 3rem 1rem;
   border: 3px solid white;
   transition: 1s;
   border-radius: 1rem;
@@ -618,7 +617,7 @@ article.lastSlide {
   margin-right: auto;
   column-gap: 3rem;
   row-gap: 3rem;
-  width: 70%;
+  width: 80%;
   margin-top: 5%;
 }
 .project-card {
@@ -772,11 +771,20 @@ article.lastSlide {
   right: -1rem;
 }
 .side-links {
-  padding: 1rem 0;
-  width: 100%;
+  padding: 1rem 1rem;
+  width: 90%;
+  overflow: hidden;
 }
 .side-links li {
   margin-bottom: 1rem;
+  transition: 0.5s;
+}
+.side-links li:hover {
+  background-color: cyan;
+  border-radius: 1rem;
+}
+.side-links li:hover > a {
+  color: white;
 }
 .side-links a {
   display: flex;
@@ -835,7 +843,7 @@ footer h1 {
 .socials a:hover {
   transform: translate3d(-0.5rem, -0.3rem, 0);
 }
-
+/**************************************************************************************************************************************************************************************************/
 @media screen and (max-width: 620px) {
   h1,
   h2,
@@ -1106,6 +1114,302 @@ footer h1 {
   .contact p {
     font-size: 1.2rem;
     color: black;
+  }
+  .email,
+  .linkedin {
+    color: rgb(14, 131, 139);
+  }
+}
+/***********************************************************************************************************************************************************************************************/
+@media screen and (min-width: 620px) and (max-width: 1200px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 1rem;
+  }
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  .navbar {
+    /* display: none; */
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    /* padding: 0 5rem 0 1rem; */
+  }
+  .underline {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  footer {
+    max-width: 100vw;
+  }
+  footer a:visited {
+    color: white;
+  }
+
+  .navbar .links {
+    display: none;
+  }
+  .sidebar {
+    width: 60%;
+  }
+  .about {
+    padding: 0.1rem 0;
+    width: 100vw;
+    height: calc(100vh - 7rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0rem;
+  }
+  .show-aside {
+    display: inline;
+    position: relative;
+    top: 0;
+    left: -3rem;
+  }
+  .navbar .logo {
+    position: relative;
+    top: 0;
+    right: -3rem;
+  }
+
+  .presentation-box {
+    width: 50%;
+    padding: 0 1rem;
+  }
+  .i-am {
+    width: 100%;
+    padding: 1rem 2rem;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .i-am h1 {
+    font-size: 2rem;
+  }
+  .i-am p {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .socialMedia {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .contactMe {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  .presentation-img {
+    display: none;
+  }
+  .projects {
+    width: 100vw;
+    height: calc(100vh - 7rem);
+  }
+  .projects::before {
+    display: none;
+  }
+  .projects h1 {
+    font-size: 1.5rem;
+  }
+  .projects-table {
+    width: 90vw;
+    height: 30rem;
+  }
+  article {
+    display: grid;
+  }
+  article > div {
+    width: 90vw;
+  }
+  .crop span {
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+  .crop span h2 {
+    letter-spacing: 0.1rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    margin-top: 0.5rem;
+    color: white;
+  }
+  .certifications {
+    max-width: 100vw;
+    padding: 1rem 3rem;
+  }
+  .certifications h1 {
+    font-size: 1rem;
+  }
+  .certifications p {
+    width: 90%;
+    padding: 0;
+    /* font-weight: bold; */
+    font-size: 0.9rem;
+    text-align: start;
+  }
+  .grid {
+    width: 90%;
+    grid-template-areas: "one one one one" "two two three three";
+  }
+  .grid > div {
+    background-color: cornflowerblue;
+  }
+  .dropElement {
+    letter-spacing: 1px;
+    justify-content: safe;
+    opacity: 0.9;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  /* .element1 h2 {
+    transform: rotate(-90deg);
+  }
+  .element2 h2 {
+    transform: rotate(90deg);
+  } */
+  .dropElement h2 {
+    padding: 3rem 1rem;
+  }
+
+  .skills {
+    max-width: 100vw;
+    padding: 1rem 0 1rem 0;
+    margin-bottom: 0;
+  }
+  .skills h1 {
+    font-size: 1.5rem;
+  }
+  .languages {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .frontEnd,
+  .backend {
+    width: 50%;
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+  .frontEnd h2,
+  .backend h2 {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+  }
+  .language {
+    padding: 2rem 0;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .language p {
+    top: 1rem;
+    left: 0;
+  }
+  .language h3 {
+    letter-spacing: 0.1rem;
+  }
+  .prev,
+  .next {
+    display: none;
+  }
+  footer {
+    width: 100vw;
+  }
+  footer h1 {
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+  }
+  footer > .socials {
+    width: 40%;
+    font-size: 1.5rem;
+  }
+
+  .contact {
+    min-height: calc(100vh - 6.2rem - 23.95rem);
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .dropElement h2 {
+    padding: 1rem 2rem;
+    letter-spacing: 0;
+  }
+  .aboutMe {
+    min-height: calc(100vh - 5rem - 45rem);
+    padding: 3rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+  }
+  .aboutMe h1 {
+    font-size: 1.5rem;
+  }
+  .section-center {
+    margin-top: 0;
+    width: 75%;
+    text-align: justify;
+  }
+  .section-center p {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: gray;
+  }
+  .projectS {
+    grid-template-columns: 1fr;
+    margin-top: 5rem;
+    width: 50%;
+  }
+  .project-info h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
+  .project-info span {
+    font-weight: bold;
+    color: white;
+  }
+  .projectsContainer h1 {
+    font-size: 1.5rem;
+  }
+  .redirectBtn {
+    position: absolute;
+    top: calc(50% - 1.5rem);
+  }
+  .technologies {
+    width: 90%;
+  }
+  .contact {
+    margin-top: 1rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contactContainer {
+    min-height: calc(100vh - 7rem - 20rem);
+  }
+  .contactContainer h1 {
+    font-size: 1.5rem;
+  }
+  .contact p {
+    font-size: 1.2rem;
+    color: gray;
   }
   .email,
   .linkedin {
